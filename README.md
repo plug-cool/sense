@@ -22,6 +22,7 @@ yarn add @plug.cool/sense
 ```
 import sense from '@plug.cool/sense';
 ```
+## Functions
 ### setProvider({apiType: STRING, network: STRING, apiKey: STRING})
 ```
 // sense currently supports Infura, Etherscan, Alchemy, and Cloudflare providers
