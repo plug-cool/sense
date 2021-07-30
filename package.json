@@ -3,8 +3,9 @@
   "version": "0.0.7",
   "description": "A tiny package for easily getting Ethereum ENS data about addresses",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/plug-cool/sense.git"
   },
   "keywords": [
     "ethereum",
