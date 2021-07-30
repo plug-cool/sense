@@ -1,0 +1,19 @@
+{
+  "name": "@plug.cool/sense",
+  "version": "0.0.7",
+  "description": "A tiny package for easily getting Ethereum ENS data about addresses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ethereum",
+    "ens",
+    "infura"
+  ],
+  "author": "https://plug.cool",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^5.4.2"
+  }
+}
