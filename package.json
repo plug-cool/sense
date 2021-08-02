@@ -1,7 +1,7 @@
 {
   "name": "@plug.cool/sense",
-  "version": "0.0.7",
-  "description": "A tiny package for easily getting Ethereum ENS data about addresses",
+  "version": "0.0.9",
+  "description": "A tiny library for easily getting Ethereum ENS data using Javascript",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -10,7 +10,10 @@
   "keywords": [
     "ethereum",
     "ens",
-    "infura"
+    "infura",
+    "alchemy",
+    "cloudflare",
+    "ethers"
   ],
   "author": "https://plug.cool",
   "license": "MIT",

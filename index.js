@@ -66,6 +66,17 @@ const setProvider = (data) => {
 	}
 }
 
+/* ENS METHODS */
+const getEthRegistrantFromENS = async (ensName, provider) => {
+/**
+ * Returns the Eth Registrant address from an ENS name
+ * @param  {type}   {String}       ensName    The verified wallet address to attach to Twitter account
+ * @param  {type}   {Object}       provider   The provider object instantiated by setProvider
+ * @return {type}   {String/Bool}  address    Returns the address tied to the ENS name
+ */
+		return await provider.resolveName(ensName);
+	}
+
 const getENSTextRecord = async (ensName, provider) => {
 /**
  * Returns ENS data if applicable
@@ -111,4 +122,5 @@ const getENSTextRecord = async (ensName, provider) => {
 }
 
 module.exports.setProvider = setProvider;
+module.exports.getEthRegistrantFromENS = getEthRegistrantFromENS;
 module.exports.getENSTextRecord = getENSTextRecord;
