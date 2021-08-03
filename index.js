@@ -35,7 +35,7 @@ const ENS_REDDIT_URL = 'com.reddit';
 
 const setProvider = (data) => {
 /**
- * Returns an address from an ENS name
+ * Returns a provider object
  * @param  {type}   {Object}       data       params to choose provider (apiType, network, apiKey)
  * @return {type}   {String/Bool}  provider   Returns the provider object for further calls
 */
@@ -66,7 +66,19 @@ const setProvider = (data) => {
 	}
 }
 
-/* ENS METHODS */
+const lookupENSFromAddress = async (address, provider) => {
+/**
+ * Returns an ENS name if address is a Registrant
+ * @param  {type}   {String}       address    The verified wallet address to attach to Twitter account
+ * @param  {type}   {Object}       provider   The provider object instantiated by setProvider
+ * @return {type}   {String/Bool}  ensName    Returns the ENS Name if address is a registrant
+ */	
+  const name = await provider.lookupAddress(address);
+  console.log("🚀 ~ file: index.js ~ line 77 ~ lookupENSFromAddress ~ name", name)
+	return await provider.lookupAddress(address);
+}
+
+
 const getEthRegistrantFromENS = async (ensName, provider) => {
 /**
  * Returns the Eth Registrant address from an ENS name
@@ -74,8 +86,8 @@ const getEthRegistrantFromENS = async (ensName, provider) => {
  * @param  {type}   {Object}       provider   The provider object instantiated by setProvider
  * @return {type}   {String/Bool}  address    Returns the address tied to the ENS name
  */
-		return await provider.resolveName(ensName);
-	}
+	return await provider.resolveName(ensName);
+}
 
 const getENSTextRecord = async (ensName, provider) => {
 /**
@@ -122,5 +134,6 @@ const getENSTextRecord = async (ensName, provider) => {
 }
 
 module.exports.setProvider = setProvider;
+module.exports.lookupENSFromAddress = lookupENSFromAddress;
 module.exports.getEthRegistrantFromENS = getEthRegistrantFromENS;
 module.exports.getENSTextRecord = getENSTextRecord;

@@ -1,6 +1,6 @@
 {
   "name": "@plug.cool/sense",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "A tiny library for easily getting Ethereum ENS data using Javascript",
   "main": "index.js",
   "repository": {
