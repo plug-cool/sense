@@ -74,8 +74,10 @@ const lookupENSFromAddress = async (address, provider) => {
  * @return {type}   {String/Bool}  ensName    Returns the ENS Name if address is a registrant
  */	
   const name = await provider.lookupAddress(address);
-  console.log("🚀 ~ file: index.js ~ line 77 ~ lookupENSFromAddress ~ name", name)
-	return await provider.lookupAddress(address);
+  if (name === null) {
+		return false;
+	}
+	return name;
 }
 
 
